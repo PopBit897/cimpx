@@ -50,7 +50,9 @@ while True:
 		print('per scaricare la versione GUI digita:ip -GUI')
 		print('per scaricare GeneratorePassword digita:GP ')
 		print('invece se vuoi una versione grafica installer digita :auto -i')
-
+		print('per altri software digita:cimpx -st')
+	if command == 'cimpx -st':
+		store()
 	if command =='ip -v0.0.1':
 		bw_o()
 	if command == 'ip -nw':
