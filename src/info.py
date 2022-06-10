@@ -7,7 +7,7 @@ def info1():
     print('Nome progetto cimpx')
     print('Nome completto del progetto Contollo il mio pc linux.')
     print('Sotto licenza MIT per modificare il codice sorgente')
-    com1=input('digta si per visuilizarlo e no per non visuilizarlo> ')
+    com1=input('digita si per visuilizarlo e no per non visuilizarlo> ')
     if com1 =="si":
         licenza()
     if com1 =="no":

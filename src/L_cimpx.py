@@ -62,7 +62,57 @@ def cimpx_reboot():
     pass
 def cv():
     print('versione cimpx e :V0.1_pre-Alpha')
-# software other brand open source
+# def  command game and app start  use cimpx software
+def moon():
+    os.system('moon-buggy')
+def sudoku():
+    os.system('sudoku')
+def nInvaders():
+    os.system('ninvaders')
+def pacman():
+    os.system('pacman4console')
+def tilde():
+    os.system('tilde')
+def ne():
+    os.system('ne')
+# remove app form cimpx store 
+def moon_u():
+    os.system('sudo apt remove moon-buggy')
+def sudoku_u():
+    os.system('sudo apt remove sudoku')
+def nInvaders_u():
+    os.system('sudo apt remove ninvaders')
+def pacman_u():
+    os.system('sudo apt remove pacman4console')
+def tilde_u():
+    os.system('sudo apt remove tilde')
+def ne_u():
+    os.system('sudo apt remove ne')
+    
+# help run software download to cimpx store(info baner )
+def helprun():
+    cls()
+    print('Avviare software scaricati da cimpx store.')
+    print('\nAvvio giochi :')
+    print('per avviare moon-buggy su cimpx digita:moon')
+    print('per avviare sudoku su cimpx digita:sudoku')
+    print('per avviare nInvaders su cimpx digita:ninvaders')
+    print('per avviare pacman4console(pac-man) su cimpx digita:pacman')
+    print('Avvio text editor:')
+    print('per avviare tilde su cimpx digita:tilde')
+    print('per avviare The nice editor su cimpx digita:ne')
+    print('\nAvvia software con linux .')
+    print('Aviare giochi:')
+    print('per avviare moon-buggy su linux digita:moon-buggy')
+    print('per avviare sudoku su linux digita:sodoku')
+    print('per avviare nInvaders su linux digita:ninvaders')
+    print('per avviare pacman4console(pac-man) su linux digita:pacman4console')
+    print('\nAvvio text editor')
+    print('Prima cosa avviare la funzione cimpx -xc o pure uscire da cimpx')
+    print('per avviare tilde su linux digita:tilde')
+    print('per avviare the nice editor su linux digita:ne')
+
+# software other brand open source software ,cimpx store v0.1Pre-Alpha
 def store():
     cls()
     text_ascii="""
@@ -73,12 +123,12 @@ def store():
             ░░╚██╔╝░╚██╔╝░███████╗███████╗╚█████╔╝╚█████╔╝██║░╚═╝░██║███████╗  ╚█████╔╝██║██║░╚═╝░██║██║░░░░░██╔╝╚██╗
             ░░░╚═╝░░░╚═╝░░╚══════╝╚══════╝░╚════╝░░╚════╝░╚═╝░░░░░╚═╝╚══════╝  ░╚════╝░╚═╝╚═╝░░░░░╚═╝╚═╝░░░░░╚═╝░░╚═╝
 
-                        ░██████╗████████╗░█████╗░██████╗░███████╗
-                        ██╔════╝╚══██╔══╝██╔══██╗██╔══██╗██╔════╝
-                        ╚█████╗░░░░██║░░░██║░░██║██████╔╝█████╗░░
-                        ░╚═══██╗░░░██║░░░██║░░██║██╔══██╗██╔══╝░░
-                        ██████╔╝░░░██║░░░╚█████╔╝██║░░██║███████╗
-                        ╚═════╝░░░░╚═╝░░░░╚════╝░╚═╝░░╚═╝╚══════╝ """
+                                                            ░██████╗████████╗░█████╗░██████╗░███████╗
+                                                            ██╔════╝╚══██╔══╝██╔══██╗██╔══██╗██╔════╝
+                                                            ╚█████╗░░░░██║░░░██║░░██║██████╔╝█████╗░░
+                                                            ░╚═══██╗░░░██║░░░██║░░██║██╔══██╗██╔══╝░░
+                                                            ██████╔╝░░░██║░░░╚█████╔╝██║░░██║███████╗
+                                                            ╚═════╝░░░░╚═╝░░░░╚════╝░╚═╝░░╚═╝╚══════╝ V0.1(store versione)"""
     print(text_ascii)
     print('\n emulator :1'), print('server:2')
     print('desktop:3')     ,print('game(terminal):4')
@@ -89,7 +139,7 @@ def store():
         command_st=input('>>> ')
 
     if command_st =='1':
-        print('not found')
+        print('sorry is pre-alpha store,mi dispiace e un store pre-alpha')
     if command_st =='3':
         cls()
         print('MATE:1')      ,print('Enlightenment:2'),print('Cinnamon:3')
@@ -185,6 +235,7 @@ def store():
         if c_game =='1':
             print('installa moon-buggy')
             os.system('sudo apt-get install moon-buggy')
+           
         if c_game =='2':
             print('installa sudoko')
             os.system('sudo apt-get install sudoku')
@@ -202,8 +253,12 @@ def store():
         except:
             c_ed=input('>>')
         if c_ed=='1':
+            print('Sto installando tilde')
+            time.sleep(0.5)
             os.system('sudo apt install tilde')
         if c_ed=='2':
+            print('Sto installando The nice editor')
+            time.sleep(0.5)
             os.system('sudo apt install ne')
 
 
