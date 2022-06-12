@@ -1,2 +1,4 @@
 cd src
-python3 main.py
+python3 bootloader.py or python bootloader.py
+
+
