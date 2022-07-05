@@ -60,3 +60,8 @@ def licenza():
             FUORI O IN COLLEGAMENTO CON IL SOFTWARE O L'UTILIZZO O ALTRE CONTRATTI NELLA
             SOFTWARE."""
     print(ita)
+def version():
+    print("""version cimpx :V.0.2_pre-alpha
+version cimpx building:V.0.0.1_pre-alpha
+version cimpx store:V.0.1_pre-alpha
+version building store:V.0.0.1_pre-alpha""")

@@ -1,6 +1,6 @@
 import os,time ,socket
 from L_cimpx import *
-from info import info1
+from info import info1,version
 cls()
 
 host_pc=socket.gethostname()
@@ -12,15 +12,19 @@ text1="""
 								██║░░██╗██║██║╚██╔╝██║██╔═══╝░░██╔██╗░
 								╚█████╔╝██║██║░╚═╝░██║██║░░░░░██╔╝╚██╗
 								░╚════╝░╚═╝╚═╝░░░░░╚═╝╚═╝░░░░░╚═╝░░╚═╝V0.2\n """
-
+print('Copyright (c) 2022 RedAnonymusITA2021')
 print(text1)
 print('hostname del tuo pc :',host_pc)
 print('il tuo ip del pc e :',ip_pc)
 text_info="""\nPer info digita:cimpx -i,per aiuto digita:cimpx -h . per cancellare digita:cls"""
 
 print(text_info)
+
 while True:
+
 	command=input('>>> ')
+	if command  =='cimpx --version':
+		version()
 	if command == 'ne -u':
 		ne_u()
 	if command == 'ne':
@@ -64,6 +68,7 @@ while True:
 		print('\nper spegnere il pc digita:pc -s')
 		print('\nin caso che tu voglia digitare un commando non essistentte digita:cimpx -xc')# xc = linux command
 		print('\nper installare altri app prodotti da RDA2ITA digita:cimpx -o')
+		print('per altri software digita:cimpx -st')
 		print('per info su come avviare software dal cimpx store:store -h')
 		print('per info su come disinstallare un software che hai scaricato dal cimpx store digita:store -u')
 	if command =='store -u':
@@ -107,7 +112,7 @@ while True:
 		print('per scaricare la versione GUI digita:ip -GUI')
 		print('per scaricare GeneratorePassword digita:GP ')
 		print('invece se vuoi una versione grafica installer digita :auto -i')
-		print('per altri software digita:cimpx -st')
+		
 	if command == 'cimpx -st':
 		store()
 	if command =='ip -v0.0.1':
