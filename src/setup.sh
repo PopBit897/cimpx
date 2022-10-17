@@ -1,6 +1,12 @@
-echo 'installazione in corso di python3 in caso che gia ce vera aggiornato e installazione'
-echo 'tqdm serve per la barra di caricamento bootloader'
-echo 'info: installer versione 0.1_pre-Alpha'
-sudo apt-get python3 && pip3 install tqdm
+echo 'installazione in corso di python3 '
+echo 'install python3 whait ...'
+echo 'installazione di librerie'
+echo 'install librery python'
+echo 'info: installer versione/version 0.2_pre-Alpha'
+sudo apt-get python3 
+pip3 install tqdm
+pip3 install rich
+pip3 install platform
+pip3 install inquirer
 
-./avvia.sh
+python3 bootloader.py

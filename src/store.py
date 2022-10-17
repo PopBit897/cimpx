@@ -1,8 +1,26 @@
 from L_cimpx import cls
 import time,os
-def store():
-    cls()
+try:
+    import inquirer as iq
+except:
+    os.system('pip3 install inquirer')
+from rich import * 
+def mac():
+        print('installazione in corso ... /install wait ...')
+        try:
+            os.system('sudo apt-get install macchanger')
+        except:
+            try:
+                os.system('pacman -S macchanger')
+            except:
+                try:
+                    os.system('yum install macchanger')
+                except:
+                    print('errore ?/error ?')
+def store_list():
     
+
+    question=[iq.List("select1",message="Seleziona cosa vuoi scaricare?:",choices=["Emulator","Desktop Enviromrnt","text editor","Game Console","MAC-Spoofing","Home"])]   
     text_ascii="""
             ░██╗░░░░░░░██╗███████╗██╗░░░░░░█████╗░░█████╗░███╗░░░███╗███████╗  ░█████╗░██╗███╗░░░███╗██████╗░██╗░░██╗
             ░██║░░██╗░░██║██╔════╝██║░░░░░██╔══██╗██╔══██╗████╗░████║██╔════╝  ██╔══██╗██║████╗░████║██╔══██╗╚██╗██╔╝
@@ -11,171 +29,104 @@ def store():
             ░░╚██╔╝░╚██╔╝░███████╗███████╗╚█████╔╝╚█████╔╝██║░╚═╝░██║███████╗  ╚█████╔╝██║██║░╚═╝░██║██║░░░░░██╔╝╚██╗
             ░░░╚═╝░░░╚═╝░░╚══════╝╚══════╝░╚════╝░░╚════╝░╚═╝░░░░░╚═╝╚══════╝  ░╚════╝░╚═╝╚═╝░░░░░╚═╝╚═╝░░░░░╚═╝░░╚═╝
 
-                                                            ░██████╗████████╗░█████╗░██████╗░███████╗
-                                                            ██╔════╝╚══██╔══╝██╔══██╗██╔══██╗██╔════╝
-                                                            ╚█████╗░░░░██║░░░██║░░██║██████╔╝█████╗░░
-                                                            ░╚═══██╗░░░██║░░░██║░░██║██╔══██╗██╔══╝░░
-                                                            ██████╔╝░░░██║░░░╚█████╔╝██║░░██║███████╗
-                                                            ╚═════╝░░░░╚═╝░░░░╚════╝░╚═╝░░╚═╝╚══════╝ V0.1(building 0.0.1)"""
-    print(text_ascii)
-    print('\n emulator :1'), print('server:2')
-    print('desktop:3')     ,print('game(terminal):4')
-    print('text editor:5')
-    print('Per tornare indietro clicca invia ,se vui tornare su cimpx  clicca invia in questa finestra')
-    print('ATTENZIONE store pre-relese build 0.0.1 version =0.1_Pre-alpha')
-    try:
-        command_st=input('>>> ')
-    except:
-        command_st=input('>>> ')
-
-    if command_st =='1':
-        print('sorry is pre-alpha store,mi dispiace e un store pre-alpha')
-        store()
-    if command_st =='3':
+                                                     ░██████╗████████╗░█████╗░██████╗░███████╗
+                                                     ██╔════╝╚══██╔══╝██╔══██╗██╔══██╗██╔════╝
+                                                     ╚█████╗░░░░██║░░░██║░░██║██████╔╝█████╗░░
+                                                     ░╚═══██╗░░░██║░░░██║░░██║██╔══██╗██╔══╝░░
+                                                     ██████╔╝░░░██║░░░╚█████╔╝██║░░██║███████╗
+                                                     ╚═════╝░░░░╚═╝░░░░╚════╝░╚═╝░░╚═╝╚══════╝ V0.1(building 0.0.2)"""
+    while True:
         cls()
-        print('MATE:1')      ,print('Enlightenment:2'),print('Cinnamon:3')
-        print('GNOME:4')     ,print('LXDE:5')          ,print('Deepin:6')
-        print('KDE Plasma:7') ,print('LXQT:8')
-        try:
-         c_st=input('>>')
-        except:
-             c_st=input('>>')
-        if c_st == 'exit':
-            os.system('python3 main.py')
-        if c_st =='1':
-            print('aggiornamento in corso ..')
-            time.sleep(0.5)
-            os.system('sudo apt update ')
-
-            print('sto scaricando MATE')
-            time.sleep(0.5)
-            os.system('sudo apt install mate-desktop-environment')
-            os.system('sudo reboot now')
+        
+        print(text_ascii)
+        
+        answer=iq.prompt(question)['select1']
+        
+        if "Emulator" in answer:
+            cls()
+            print('non ce ancora nessuna lista')
+            time.sleep(10)
+            store_list()
+        elif "MAC-Spoofing" in answer:
+            mac()
             
-        if c_st=='2':
-            print('aggirnamento in corso..')
-            os.system('sudo apt update')
-            print('sto scaricando  enlightenmemt')
-            time.sleep(0.5)
-            os.system('sudo apt -y install enlightenment')
-            os.system('sudo reboot now')
-            
-        if c_st =='3':
-            print('sto aggungendo PPA reposetery')
-            time.sleep(0.5)
-            os.system('sudo add-apt-repository ppa:embrosyn/cinnamon')
-            print('aggiornamento in corso ..')
-            os.system('sudo apt update')
-            print('sto scaricando cinnamon')
-            time.sleep('sudo apt install cinnamon')
-            os.system('sudo reboot now')
-
-        if c_st=='4':
-            print('aggiornamento in corso..')
-            time.sleep(0.5)
-            os.system('sudo apt update')
-            print('sto scaricando  GNOME')
-            time.sleep(0.5)
-            os.system('sudo apt-get install -y gnome-desktop-environment')
-            os.system('sudo reboot now')
-        if c_st=='5':
-            print('aggiornamento in corso..')
-            time.sleep(0.5)
-            print('sto scaricando LXDE')
-            time.sleep(0.5)
-            os.system('sudo apt install lxde')
-            os.system('sudo reboot now')
-        else : 
-            store()
-        if c_st=='6':
-            print('faill install sorry ppa leaeasy/dde not working (for your self code pythone is desable)')
-         #   time.sleep(0.5)
-         #   os.system('sudo add-apt-repository ppa:leaeasy/dde')
-          #  print('aggiornamento in corso..')
-          #  time.sleep(0.5)
-          #  os.system('sudo apt update')
-            #print('installazione in corso..')
-          #  time.sleep(0.5)
-           # os.system('sudo apt install dde')
-            
-            #print(' installazione di deepin file maneger')
-           # time.sleep(0.5)
-            #os.system('sudo apt-get install dde-file-manager')
-            #print('install theme')
-            #time.sleep(0.5)
-          #  os.system('sudo apt install deepin-gtk-theme')
-           # os.system('sudo reboot now')
-        if c_st=='7':
-            print('aggirnamento in corso..')
-            os.system('sudo apt update')
-            time.sleep(0.5)
-            print('KDE plasma full version install(1GB)')
-            time.sleep(0.5)
-            os.system('sudo apt install kde-full')
-            os.system('sudo reboot now')
-
-        if c_st=='8':
-            print('aggiornamento in corso..')
-            os.system('sudo apt update')
-            time.sleep(0.5)
-            os.system('sudo apt install lxqt sddm')
-            os.system('sudo reboot now')
-
-    if command_st=='4':
-        cls()
-        print('Moon-buggy:1'),print('sudoku:2')
-        print('nInvaders:3'),print('Pac-Man:4')
-        try:
-            c_game=input('>>')
-        except:
-            c_game=input('>>')
-        if c_game =='1':
-            print('installa moon-buggy')
-            os.system('sudo apt-get install moon-buggy')
-            store()
+        elif 'Home' in answer:
            
-        if c_game =='2':
-            print('installa sudoko')
-            os.system('sudo apt-get install sudoku')
-            store()
-        if c_game =='3':
-            print('installa nInvaders')
-            os.system('sudo apt-get install  ninvaders')
-            store()
-        if c_game =='4':
-            print('installa pac-man')
-            os.system('sudo apt-get install pacman4console')
-            store()
-        else:
-            store()
-    if command_st=='5':
+            from main import cimpx_main
+            cimpx_main()
+        elif "Desktop Enviromrnt" in answer:
+            cls()
+            print(text_ascii)
+            question1=[iq.List("select2",message="Seleziona cosa vuoi scaricare?:",choices=["Mate","GNOME","Kde_full","LXDE","Back"])] 
+            answer1=iq.prompt(question1)["select2"]
+            if 'GNOME' in answer1:
+                print('Server ...')
+                print('install Gnome ...')
+                try:
+                    os.system('sudo apt -y gnome-desktop-environment')
+                except:
+                    try:
+                        os.system('pacman -S -y gnome-desktop-environment ')
+                    except:
+                        os.system('yum install -y gnome-desktop-environment ')
+            elif 'Mate' in answer1:
+                print('Server ...')
+                print('install Mate ...')
+                try:
+                    os.system('sudo apt mate-desktop-environment')
+                except:
+                    try:
+                        os.system('pacman -S mate-desktop-environment')
+                    except:
+                        os.system('yum install mate-desktop-environment')
+            elif 'KDE' in answer1:
+                print('Server ...')
+                print('install kde ...')
+                try:
+                    os.system('sudo  apt install  kde-full')
+                except:
+                    try:
+                        os.system('pacman -S   kde-full')
+                    except:
+                        os.system('yum  install  kde-full')
+            elif 'LXDE' in answer1:
+                print('Server ...')
+                print('install LXDE ...')
+                try:
+                    os.system('sudo  apt install lxde')
+                except:
+                    try:
+                        os.system('pacman -S  lxde')
+                    except:
+                        os.system('yum  install lxde')
+        elif 'text editor' in answer:
+            question1=[iq.List("select2",message="Seleziona cosa vuoi scaricare?:",choices=["NE","Tilde","Back"])] 
+            answer1=iq.prompt(question1)["select2"]
+            if 'NE' in answer1:
+                print('Server ...')
+                print('install nice editor ...')
+                try:
+                    os.system('sudo apt install ne')
+                except:
+                    try:
+                        os.system('pacman -S ne')
+                    except:
+                        os.system('yum install ne')
+        elif 'Tilde' in answer1:
+                print('Server ...')
+                print('install tilde editor ...')
+                try:
+                    os.system('sudo apt install tilde')
+                except:
+                    try:
+                        os.system('pacman -S tilde')
+                    except:
+                        os.system('yum install tilde')
 
-        print('tilde:1'),print('The nice editor:2')
-        try:
-            c_ed=input('>>')
-        except:
-            c_ed=input('>>')
-        if c_ed=='1':
-            print('Sto installando tilde')
-            time.sleep(0.5)
-            os.system('sudo apt install tilde')
-            store()
-        if c_ed=='2':
-            print('Sto installando The nice editor')
-            time.sleep(0.5)
-            os.system('sudo apt install ne')
-            store()
-        else:
-            store()
+            
 
-    else:
-        import main 
-
-
-
-
-
-
+            
+store_list()
 
 
 

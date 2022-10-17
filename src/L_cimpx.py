@@ -1,4 +1,3 @@
-from __future__ import print_function
 import os,time,webbrowser
 
 #downlod ip-tools terminal ,terminal lest version and GUI and other software by RDA2ITA and no
@@ -115,40 +114,8 @@ def helprun():
 # software other brand open source software ,cimpx store v0.1Pre-Alpha move to store.py file 
 
 def store():
-   from store import store 
-   store()
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+   from store import store_list
+   store_list()
 
 
 
